@@ -19,8 +19,10 @@ for i in nums:
     else:
         count += int(i)
 
-#finding the highest("max") number in the list 
-print(max(every_elves_calories))
+#sorted list of the list
+every_elves_calories = sorted(every_elves_calories)
 
-#data = sorted(data)
-#print(data[-1]+data[-2]+data[-3])
+#the sorted list goes from the lowest to highest
+#so we need to add the last three itens of the list 
+#to get the sum of the three elves carrying the highest calories
+print(every_elves_calories[-1]+every_elves_calories[-2]+every_elves_calories[-3])
