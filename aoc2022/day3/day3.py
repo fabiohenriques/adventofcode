@@ -28,4 +28,19 @@ for i in data:
         if char in left and char in right:
             total += key + 1
 
-print(total)
+print("total part 1:", total)
+
+#Part 2
+
+x = 3
+total_pt2 = 0
+#divide data in parts of 3
+for i in range(0, len(data), 3):
+    elements = data[i:x]
+    x += 3
+
+    for key, char in enumerate(ascii_letters):
+        if char in elements[0] and char in elements[1] and char in elements[2]:
+            total_pt2 += key + 1
+
+print("total part 2:", total_pt2)
